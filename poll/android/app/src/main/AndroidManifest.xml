@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.poll">
+     <uses-permission android:name="android.permission.INTERNET"/> <!-- Add this -->
    <application
         android:label="poll"
         android:name="${applicationName}"

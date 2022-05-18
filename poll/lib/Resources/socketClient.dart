@@ -5,7 +5,7 @@ class SocketClent {
   IO.Socket? socket;
 
   SocketClent._internal() {
-    socket = IO.io("http://192.168.1.4:3000", <String, dynamic>{
+    socket = IO.io("https://pollappaman.herokuapp.com", <String, dynamic>{
       'transports': ['websocket'],
       'autoConnect': false,
     });

@@ -24,7 +24,6 @@ io.on("connection", (Socket) => {
       
         pollsList.push({ "pollname": question, "uid": uniqueId,"pollsQuestion":pollsQuestion});
       
-
         io.emit("createRoomSuccess",pollsList)
   });
 
@@ -37,7 +36,7 @@ io.on("connection", (Socket) => {
           }
         })
         console.log(pollsList)
-        Socket.emit("updateListListner",pollsList)
+        io.emit("updateListListner",pollsList)
   })
 
 

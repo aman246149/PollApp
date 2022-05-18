@@ -87,8 +87,7 @@ class _HomePageState extends State<HomePage> {
                                           pollsquestioncontroller.text,
                                       "pollPercentage": 0
                                     });
-                                    showSnackbar(context,
-                                        "QuestionAdded ,You can add more question");
+
                                     pollsquestioncontroller.clear();
                                   },
                                   icon: const Icon(
