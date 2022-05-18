@@ -1,16 +1,16 @@
 # poll
 
-A new Flutter project.
+## Features of app
+- Flutter as frontend
+- Websockets as backend
+- Two way communication using websockets
 
-## Getting Started
+## Description
+- You can give poll in real time through this app
+- Cross platform
 
-This project is a starting point for a Flutter application.
+## Demo
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://user-images.githubusercontent.com/53884276/168963601-78127d4d-684c-4044-994f-2f8a90e391fe.mp4
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
