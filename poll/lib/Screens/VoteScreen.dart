@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:poll/Resources/socketMethods.dart';
 import 'package:poll/Utils/Color.dart';
 import 'package:poll/Utils/Text.dart';
@@ -57,43 +58,51 @@ class _VoteScreenState extends State<VoteScreen> {
 
                 SocketMethods().updateListListner(context);
               },
-              child: ListTile(
-                title: Text(
-                  roomData.pollsName[widget.indexofHomepage]["pollsQuestion"]
-                          [index]["pollsQuestion"]
-                      .toString(),
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        BoxShadow(blurRadius: 30, color: Colors.green)
-                      ]),
-                ),
-                subtitle: LinearProgressIndicator(
-                  backgroundColor: Colors.grey,
-                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
-                  minHeight: 25,
-                  value: roomData.pollsName[widget.indexofHomepage]
-                              ["pollsQuestion"][index]["pollPercentage"]
-                          .toDouble() *
-                      0.01,
-                ),
-                trailing: Text(
-                  roomData.pollsName[widget.indexofHomepage]["pollsQuestion"]
-                          [index]["pollPercentage"]
-                      .toString(),
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        BoxShadow(blurRadius: 30, color: Colors.green)
-                      ]),
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Card(
+                  elevation: 7,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      title: Text(
+                        roomData.pollsName[widget.indexofHomepage]
+                                ["pollsQuestion"][index]["pollsQuestion"]
+                            .toString(),
+                        style: GoogleFonts.lato(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              BoxShadow(blurRadius: 30, color: Colors.green)
+                            ]),
+                      ),
+                      subtitle: LinearProgressIndicator(
+                        backgroundColor: Colors.black12,
+                        valueColor: const AlwaysStoppedAnimation<Color>(
+                            Colors.deepPurpleAccent),
+                        minHeight: 25,
+                        value: roomData.pollsName[widget.indexofHomepage]
+                                    ["pollsQuestion"][index]["pollPercentage"]
+                                .toDouble() *
+                            0.01,
+                      ),
+                      trailing: Text(
+                        "${roomData.pollsName[widget.indexofHomepage]["pollsQuestion"][index]["pollPercentage"]} %"
+                            .toString(),
+                        style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              BoxShadow(blurRadius: 30, color: Colors.green)
+                            ]),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             );
-            i++;
           },
         ),
       ),

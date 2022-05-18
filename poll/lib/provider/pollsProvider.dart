@@ -4,7 +4,7 @@ class PollsProvider extends ChangeNotifier {
   List<dynamic> _pollsName = [];
 
 //getter
-  List<dynamic> get pollsName => _pollsName;
+  List<dynamic> get pollsName => _pollsName.reversed.toList();
 
   //setter
   void updateList(var data) {
